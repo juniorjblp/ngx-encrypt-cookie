@@ -1,0 +1,163 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+
+        "cookietest": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/cookietest",
+            "sourceRoot": "projects/cookietest/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/cookietest",
+                        "index": "projects/cookietest/src/index.html",
+                        "main": "projects/cookietest/src/main.ts",
+                        "polyfills": "projects/cookietest/src/polyfills.ts",
+                        "tsConfig": "projects/cookietest/tsconfig.app.json",
+                        "aot": false,
+                        "assets": [
+                            "projects/cookietest/src/favicon.ico",
+                            "projects/cookietest/src/assets"
+                        ],
+                        "styles": [
+                            "projects/cookietest/src/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [{
+                                "replace": "projects/cookietest/src/environments/environment.ts",
+                                "with": "projects/cookietest/src/environments/environment.prod.ts"
+                            }],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [{
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "cookietest:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "cookietest:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "cookietest:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/cookietest/src/test.ts",
+                        "polyfills": "projects/cookietest/src/polyfills.ts",
+                        "tsConfig": "projects/cookietest/tsconfig.spec.json",
+                        "karmaConfig": "projects/cookietest/karma.conf.js",
+                        "assets": [
+                            "projects/cookietest/src/favicon.ico",
+                            "projects/cookietest/src/assets"
+                        ],
+                        "styles": [
+                            "projects/cookietest/src/styles.scss"
+                        ],
+                        "scripts": []
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/cookietest/tsconfig.app.json",
+                            "projects/cookietest/tsconfig.spec.json",
+                            "projects/cookietest/e2e/tsconfig.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "projects/cookietest/e2e/protractor.conf.js",
+                        "devServerTarget": "cookietest:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "cookietest:serve:production"
+                        }
+                    }
+                }
+            }
+        },
+        "ngx-encrypt-cookie": {
+            "projectType": "library",
+            "root": "projects/ngx-encrypt-cookie",
+            "sourceRoot": "projects/ngx-encrypt-cookie/src",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/ngx-encrypt-cookie/tsconfig.lib.json",
+                        "project": "projects/ngx-encrypt-cookie/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ngx-encrypt-cookie/src/test.ts",
+                        "tsConfig": "projects/ngx-encrypt-cookie/tsconfig.spec.json",
+                        "karmaConfig": "projects/ngx-encrypt-cookie/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/ngx-encrypt-cookie/tsconfig.lib.json",
+                            "projects/ngx-encrypt-cookie/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "defaultProject": "ngx-encrypt-cookie"
+}

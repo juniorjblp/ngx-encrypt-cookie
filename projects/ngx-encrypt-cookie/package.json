@@ -1,0 +1,40 @@
+{
+    "name": "ngx-encrypt-cookie",
+    "version": "1.0.0",
+    "description": " encrypting and decrypting cookies in angular",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chaitanyasairam-d/ngx-encrypt-cookie"
+    },
+    "keywords": [
+        "cookies",
+        "angular cookies",
+        "angular secure cookies",
+        "ngx secure cookies",
+        "encrypt cookies",
+        "cookie service",
+        "ngx cookies secure",
+        "angular cookie encryption",
+        "ngx secure",
+        "cookie service",
+        "ngx-secure",
+        "ngx cookie secure service",
+        "cookie encryption",
+        "ngx encryption",
+        "ngx encryption cookie"
+    ],
+    "author": {
+        "name": "chaitanyasairam-d",
+        "email": "chaitanyasairam.social@gmail.com",
+        "git": "https://www.github.com/chaitanyasairam-d"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/common": "^8.2.0",
+        "@angular/core": "^8.2.0",
+        "tslib": "^1.10.0"
+    },
+    "dependencies": {
+        "crypto-js": "3.3.0"
+    }
+}
