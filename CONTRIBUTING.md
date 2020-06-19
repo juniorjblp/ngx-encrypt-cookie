@@ -1,5 +1,5 @@
 
-# Contribution guide lines for ngx-secure-cookie
+# Contribution guide lines for ngx-encrypt-cookie
 * fork the project
 * so before doing any changes to code it is always a better practice to check for errors.
 * run `npm run build` or `ng build`.
