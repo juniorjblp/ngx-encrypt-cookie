@@ -16,4 +16,4 @@
 
 ## Pushing Code
 * now push your code to forked repo.
-* now rasie a pull request to make merge changes on the main repo of ngx-secure-cookie
+* now rasie a pull request to make merge changes on the main repo of ngx-encrypt-cookie
