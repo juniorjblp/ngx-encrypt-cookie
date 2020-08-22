@@ -1,6 +1,6 @@
 {
     "name": "ngx-encrypt-cookie",
-    "version": "1.0.0",
+    "version": "1.1.2",
     "description": " encrypting and decrypting cookies in angular",
     "repository": {
         "type": "git",
