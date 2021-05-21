@@ -157,5 +157,5 @@ this.cookie.deleteAll("/");
 
 - Name : Chaitanya
 - Git : https://github.com/chaitanyasairam-d
-- Blog : https://ngfirecamp.blogspot.com/
-- Portfolio : https://dcsr-portfolio.herokuapp.com
+- Blog : https://ngfirecamp.in
+- LinkedIn : https://in.linkedin.com/in/chaitanyasairam-d
