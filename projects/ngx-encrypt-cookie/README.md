@@ -2,7 +2,7 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
-Click here to go to blog - [ngfirecamp](https://www.ngfirecamp.in/2020/06/angular-cookie-encryption-with-ngx.html)
+Click here to go to blog - [coderAdda](https://coder-adda.blogspot.com/2022/02/ngx-encrypt-cookie.html)
 
 # Installation
 
@@ -159,5 +159,4 @@ this.cookie.deleteAll("/");
 
 - Name : Chaitanya
 - Git : https://github.com/chaitanyasairam-d
-- Blog : https://ngfirecamp.in
-- LinkedIn : https://in.linkedin.com/in/chaitanyasairam-d
+- Blog : https://coder-adda.blogspot.com/2022/02/ngx-encrypt-cookie.html

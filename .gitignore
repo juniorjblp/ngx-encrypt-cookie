@@ -45,3 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 ngx-secure-cookie-1.0.3.tgz
+package-lock.json
+yarn.lock
